@@ -1,0 +1,369 @@
+/* Google-Font-CDN */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Font-Awesome-CDN */
+@import url('./font-awesome.css');
+
+/* Root-CSS-Variable */
+:root {
+    --primary-color: #FE4A51;
+    --body-color: #818181;
+    --heading-color: #2D2D2D;
+    --body-font: 'Lato', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+}
+
+/* Reset-CSS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--body-color);
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.3em;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0 0 16px 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Helper-Classes */
+.wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navbar-Styles */
+.navbar-area {
+    min-height: 116px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar-Logo */
+.navbar-area .logo {
+    color: #2D2D2D;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar-area .logo span {
+    color: var(--primary-color);
+}
+
+/* Navbar-Menu */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin: 0 25px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    color: #2D2D2D;
+}
+
+.navbar ul li:hover a {
+    color: var(--primary-color);
+}
+
+/* Navbar-Search */
+.navbar-search-form {
+    width: 135px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 13px;
+}
+
+
+.navbar-search-form label {
+    color: var(--primary-color);
+}
+
+.navbar-search-form #search_field {
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 8px;
+    padding: 0;
+    font-size: 12px;
+    width: 110px;
+}
+
+.toggle-menu {
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+.toggle-menu:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Header-Area-Styles */
+.header-area {
+    background: url('../images/header-bg.jpg') no-repeat scroll center center / cover;
+    padding-top: 128px;
+    padding-bottom: 244px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.header-area:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.header-area .header-content {
+    max-width: 529px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-area .main-title {
+    color: #ffffff;
+    font-size: 72px;
+    line-height: 100.9%;
+    margin-bottom: 32px;
+}
+
+.header-meta {
+    list-style: none;
+    margin: -19px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.header-meta li {
+    margin: 19px;
+}
+
+.header-meta li .icon {
+    color: var(--primary-color);
+    margin-right: 6px;
+}
+
+.header-pagination-slider {
+    margin: -126px -5px -10px -5px;
+
+}
+
+.header-pagination-slider .swiper-slide .slide-image {
+    background-color: #ffffff;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    line-height: 0;
+}
+
+.header-pagination-slider .swiper-slide .slide-image:before {
+    content: "";
+    background: linear-gradient(180deg, #FFFFFF 43.02%, #FE4A51 99.31%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+
+.header-pagination-slider .swiper-slide.swiper-slide-thumb-active .slide-image:before {
+    height: 100%;
+}
+
+/* Footer-Area */
+.footer-widget-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.footer-widget-items .footer-widget {
+    width: calc(25% - 30px);
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.footer-top {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.footer-widget .widget-title {
+    font-size: 24px;
+    color: #2D2D2D;
+    margin-bottom: 15px;
+}
+
+.footer-widget .desc {
+    font-weight: 300;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #2D2D2D99;
+    display: inline-block;
+}
+
+.nav-links li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.nav-links li a:hover {
+    color: #FE4A51;
+}
+
+.nav-links li::marker {
+    color: red;
+    font-size: 159%;
+}
+
+.nav-links li:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #FE4A51;
+    display: block;
+    border-radius: 100px;
+    margin-right: 11px;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.input-control {
+    background: #DEDADA;
+    border: none;
+    outline: none;
+    height: 33px;
+    padding: 0 17px;
+    width: 100%;
+}
+
+.subscribe-form {
+    margin-top: 16px;
+    position: relative;
+}
+
+.subscribe-form .input-control {
+    width: calc(100% - 109px);
+}
+
+.subscribe-form .form-submit {
+    width: 75px;
+    height: 33px;
+    border: none;
+    background-color: #FE4A51;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    float: right;
+}
+
+.input-control::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #2D2D2D;
+    /* Firefox */
+}
+
+.input-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #2D2D2D;
+}
+
+.input-control::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #2D2D2D;
+}
+
+.footer-bottom {
+    padding: 19px 0;
+    background-color: #2D2D2D;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer-bottom .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom .copy-icon {
+    font-size: 150%;
+    margin-right: 10px;
+}
