@@ -118,6 +118,26 @@ h1,h2,h3,h4,h5,h6 {
     width: 110px;
 }
 
+.toggle-menu {
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+.toggle-menu:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
 /* Header-Area-Styles */
 .header-area {
     background: url('../images/header-bg.jpg') no-repeat scroll center center / cover;
